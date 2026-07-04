@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0e0720">
+    <meta name="description" content="Lenormand Cards — a 36-card Lenormand oracle reading app, read by neighbouring combinations.">
+    <title>Lenormand Cards</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="sky"></div>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">36-card Lenormand oracle</p>
+        <h1>Lenormand Cards</h1>
+      </div>
+      <nav class="main-nav" aria-label="Main">
+        <a href="#/home">Home</a>
+        <a href="#/daily">Daily</a>
+        <a href="#/three-card">3-Card</a>
+        <a href="#/significator">Significator</a>
+        <a href="#/tableau">Tableau</a>
+        <a href="#/deck">Deck</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main id="app-root"></main>
+
+    <footer class="app-footer">
+      <p>Lenormand Cards works offline once loaded, and reads upright only — Lenormand is traditionally not read reversed.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="reading.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

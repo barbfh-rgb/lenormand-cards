@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0e0720">
+    <meta name="description" content="About Lenormand Cards — where the deck comes from and how it differs from tarot and Kipper.">
+    <title>About Lenormand Cards</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="sky"></div>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">36-card Lenormand oracle</p>
+        <h1>About Lenormand Cards</h1>
+      </div>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html#/home">Home</a>
+        <a href="index.html#/deck">Deck</a>
+        <a href="about.html" class="is-active">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel">
+        <div class="section-heading">
+          <span class="diamond" aria-hidden="true"></span>
+          <div>
+            <h2>Where Lenormand comes from</h2>
+          </div>
+        </div>
+        <div class="about-content">
+          <p>The deck takes its name from Marie Anne Lenormand, a celebrated Parisian fortune-teller active in the late 18th and early 19th century, though the 36-card system that carries her name today was actually formalised after her death, built on an earlier German parlour game called "The Game of Hope" (Das Spiel der Hoffnung), published around 1799. Each card traditionally corresponds to both a playing card and a plain, everyday symbol — a ship, a letter, a ring, a house — rather than an elaborate allegorical scene.</p>
+          <p>It shares its 36-card structure and several familiar images with Kipper, and the two traditions are often confused for each other. Lenormand is generally the older, more established system in continuous international use, with a strong, well-documented technique built around reading cards in combination and, in the Grand Tableau, in fixed "houses."</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <span class="diamond" aria-hidden="true"></span>
+          <div>
+            <h2>How it differs from tarot</h2>
+          </div>
+        </div>
+        <div class="about-content">
+          <p>Tarot leans symbolic and psychological — seventy-eight cards, major and minor arcana, each dense with archetype and open to layered, personal interpretation. Lenormand is deliberately plainer. Its thirty-six cards are read upright only, and a single card in isolation tells you very little. Meaning is built <em>between</em> cards — the Ship next to the Letter is news arriving from a distance, not two separate ideas sitting side by side.</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <span class="diamond" aria-hidden="true"></span>
+          <div>
+            <h2>How it differs from Kipper</h2>
+          </div>
+        </div>
+        <div class="about-content">
+          <p>Since this deck sits right next to Kipper Cards in the same app family, it's worth being precise about the difference. The two decks share a strikingly similar 36-card structure and many of the same core images, and in casual reading practice the two are often blended. But Lenormand carries a stronger, more codified tradition around reading order and structure — particularly the "houses" system in the Grand Tableau, where each numbered position carries a fixed background theme regardless of which card lands there, and "mirroring," where the card diametrically opposite your significator is read as a secondary, more hidden influence. Kipper, by contrast, leans slightly more toward people and domestic daily life, with a less rigidly fixed house structure.</p>
+          <p>Neither is more "correct." They're close cousins, and this app treats them as related but distinct techniques rather than interchangeable versions of the same thing.</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <span class="diamond" aria-hidden="true"></span>
+          <div>
+            <h2>Reading it your own way</h2>
+          </div>
+        </div>
+        <div class="about-content">
+          <p>There's no single authority you need to answer to before using a deck like this one. Folk fortune-tellers, grandmothers reading over a kitchen table, and witches with no fixed rulebook have all used systems like Lenormand for the same reason: it's a plain, practical way of laying a question out and looking at it clearly.</p>
+          <p>This app follows the traditional structure — upright meanings, neighbour combinations, houses, corners, and optional mirroring in the Grand Tableau — because that structure is what makes the readings coherent. What you bring to the reading, and what you make of what comes up, is entirely yours.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>Lenormand Cards works offline once loaded, and reads upright only — Lenormand is traditionally not read reversed.</p>
+    </footer>
+
+    <script>
+      (function buildSky() {
+        const f = document.createDocumentFragment();
+        for (let i = 0; i < 120; i++) {
+          const s = document.createElement('div');
+          s.className = 's';
+          const sz = Math.random() * 2 + 0.4;
+          Object.assign(s.style, {
+            width: sz + 'px',
+            height: sz + 'px',
+            top: Math.random() * 100 + '%',
+            left: Math.random() * 100 + '%',
+            '--d': (Math.random() * 5 + 2) + 's',
+            '--dl': (Math.random() * 7) + 's'
+          });
+          f.appendChild(s);
+        }
+        document.getElementById('sky').appendChild(f);
+      })();
+    </script>
+  </body>
+</html>
