@@ -42,7 +42,7 @@ const CARD_ICONS = {
   29: '<circle cx="50" cy="30" r="13"/><path d="M32 88 L40 45 L60 45 L68 88 Z"/>',
   30: '<line x1="50" y1="50" x2="50" y2="90"/><path d="M50 50 C 30 50, 22 30, 38 18 C 44 30, 44 44, 50 50 Z"/><path d="M50 50 C 70 50, 78 30, 62 18 C 56 30, 56 44, 50 50 Z"/>',
   31: '<circle cx="50" cy="50" r="18"/><line x1="50" y1="10" x2="50" y2="22"/><line x1="50" y1="78" x2="50" y2="90"/><line x1="10" y1="50" x2="22" y2="50"/><line x1="78" y1="50" x2="90" y2="50"/><line x1="22" y1="22" x2="30" y2="30"/><line x1="70" y1="70" x2="78" y2="78"/><line x1="78" y1="22" x2="70" y2="30"/><line x1="30" y1="70" x2="22" y2="78"/>',
-  32: '<path d="M60 15 A 35 35 0 1 0 60 85 A 27 27 0 1 1 60 15 Z" fill="currentColor" stroke="none"/>',
+  32: '<defs><mask id="moon-crescent-mask"><rect width="100" height="100" fill="white"/><circle cx="58" cy="40" r="22" fill="black"/></mask></defs><circle cx="44" cy="50" r="28" fill="currentColor" stroke="none" mask="url(#moon-crescent-mask)"/>',
   33: '<circle cx="30" cy="50" r="14"/><circle cx="30" cy="50" r="5" fill="#1a1138"/><line x1="42" y1="50" x2="85" y2="50"/><line x1="70" y1="50" x2="70" y2="62"/><line x1="80" y1="50" x2="80" y2="60"/>',
   34: '<path d="M15 50 C 35 25, 70 25, 88 50 C 70 75, 35 75, 15 50 Z"/><path d="M15 50 L2 38 M15 50 L2 62"/><circle cx="65" cy="45" r="3" fill="currentColor" stroke="none"/>',
   35: '<circle cx="50" cy="22" r="8"/><line x1="50" y1="30" x2="50" y2="85"/><line x1="30" y1="45" x2="70" y2="45"/><path d="M20 55 C 20 78, 38 88, 50 88 C 62 88, 80 78, 80 55"/>',
