@@ -85,7 +85,7 @@ function buildCardTile(card, label) {
     <span class="card-number">No. ${card.id}</span>
     <span class="card-name">${card.name}</span>
     <p class="card-meaning">${card.meaning}</p>
-    ${showPlayingCards && card.playingCard ? `<span class="playing-card-badge">${card.playingCard}</span>` : ""}
+    ${showPlayingCards && card.playingCard ? `<span class="playing-card-badge">Playing card: ${card.playingCard}</span>` : ""}
   `;
   return tile;
 }
@@ -443,7 +443,7 @@ function renderDeck(root) {
           <p><strong>${card.meaning}</strong></p>
           <p>${card.short}</p>
           <p>${card.long}</p>
-          ${showPlayingCards && card.playingCard ? `<span class="playing-card-badge">${card.playingCard}</span>` : ""}
+          ${showPlayingCards && card.playingCard ? `<span class="playing-card-badge">Playing card: ${card.playingCard}</span>` : ""}
         `;
         detailBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
       });
