@@ -161,6 +161,16 @@ function renderHome(root) {
   root.append(panel);
 }
 
+function describeDailySeed(seed) {
+  const match = /^daily-(\d+)-(\d+)-(\d+)$/.exec(seed);
+  if (match) {
+    const [, y, m, d] = match;
+    const date = new Date(Number(y), Number(m) - 1, Number(d));
+    return date.toLocaleDateString(undefined, { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+  }
+  return `Custom seed: ${seed}`;
+}
+
 function renderDaily(root) {
   const panel = document.createElement("section");
   panel.className = "panel";
@@ -178,6 +188,11 @@ function renderDaily(root) {
   function show(seed) {
     result.replaceChildren();
     const reading = LenormandReading.drawDaily(seed);
+    const dateLine = document.createElement("p");
+    dateLine.className = "card-label";
+    dateLine.style.marginBottom = "0.75rem";
+    dateLine.textContent = describeDailySeed(reading.seed);
+    result.append(dateLine);
     const tile = buildCardTile(reading.card);
     result.append(tile);
     const long = document.createElement("p");
