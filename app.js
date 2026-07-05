@@ -341,7 +341,9 @@ function renderTableau(root) {
       if (showMirror && reading.mirror.tile && tile.index === reading.mirror.tile.index) {
         el.classList.add("is-near");
       }
+      el.title = `No. ${tile.card.id} — ${tile.card.name}`;
       el.innerHTML = `
+        <div class="tile-icon">${cardIconSVG(tile.card.id)}</div>
         <span class="tile-number">${tile.card.id}</span>
         <span class="tile-name">${tile.card.name}</span>
       `;
