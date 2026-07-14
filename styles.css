@@ -257,6 +257,7 @@ main {
   display: grid;
   gap: 0.55rem;
   padding: 0.95rem;
+  min-width: 0;
   border: 1px solid rgba(201, 168, 76, 0.4);
   border-radius: 14px;
   background: linear-gradient(160deg, #34225e 0%, #261a4a 60%, #1a1138 100%);
@@ -267,10 +268,17 @@ main {
   position: relative;
   display: grid;
   place-items: center;
+  width: 100%;
+  align-self: start;
   aspect-ratio: 3 / 4;
   border-radius: 10px;
   background: radial-gradient(ellipse at 50% 40%, rgba(120, 50, 200, 0.22), transparent 65%);
   overflow: hidden;
+}
+
+.card-meaning {
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .card-face::before {
@@ -542,6 +550,30 @@ details summary {
 
   .significator-layout {
     max-width: none;
+    gap: 0.45rem;
+  }
+
+  .significator-layout .card-tile {
+    padding: 0.55rem 0.45rem;
+    gap: 0.35rem;
+  }
+
+  .significator-layout .card-name {
+    font-size: 0.68rem;
+    letter-spacing: 0.01em;
+  }
+
+  .significator-layout .card-meaning {
+    font-size: 0.72rem;
+  }
+
+  .significator-layout .card-number {
+    font-size: 0.52rem;
+  }
+
+  .significator-layout .card-label {
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
   }
 
   .tableau-tile {
