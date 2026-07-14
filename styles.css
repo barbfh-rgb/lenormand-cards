@@ -646,3 +646,34 @@ details summary {
   font-style: italic;
   color: rgba(228, 220, 245, 0.9);
 }
+
+/* ── passcode gate (casual privacy only, not real security) ── */
+body.is-locked > *:not(.gate) { display: none; }
+.gate {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: radial-gradient(ellipse at 40% 20%, #1e0a3a 0%, #0e0720 45%, #05030f 100%);
+  align-items: center; justify-content: center;
+}
+body.is-locked .gate { display: flex; }
+.gate-box {
+  display: flex; flex-direction: column; align-items: center; gap: 1rem;
+  padding: 2.2rem 2rem;
+  background: linear-gradient(160deg, #382560 0%, #281c4e 60%, #1c133a 100%);
+  border: 1px solid var(--gold); border-radius: 18px;
+  box-shadow: 0 0 40px rgba(201,168,76,.25), 0 18px 50px rgba(0,0,0,.55);
+  width: min(90vw, 20rem);
+}
+.gate-title { font-family:'Cinzel Decorative',cursive; font-size:1.2rem; color:var(--gold2); text-align:center; margin:0; letter-spacing:.04em; }
+.gate-input {
+  width:100%; padding:.7rem .9rem; border-radius:10px;
+  border:1px solid rgba(201,168,76,.5); background:rgba(5,3,15,.5);
+  color:var(--mist); text-align:center; font-family:'Cinzel',serif; letter-spacing:.08em; font-size:.95rem; outline:none;
+}
+.gate-input:focus { border-color:var(--gold2); }
+.gate-btn {
+  width:100%; padding:.7rem 1.3rem; border:none; border-radius:999px;
+  background:linear-gradient(160deg, #e8c96a 0%, #c9a84c 100%); color:#1c133a;
+  font-family:'Cinzel',serif; font-weight:600; letter-spacing:.14em; text-transform:uppercase; font-size:.7rem; cursor:pointer; min-height:44px;
+}
+.gate-btn:active { opacity:.85; }
+.gate-error { margin:0; min-height:1.2em; color:#e6b8d0; font-family:'Cinzel',serif; font-size:.62rem; letter-spacing:.1em; }
