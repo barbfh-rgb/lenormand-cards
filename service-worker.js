@@ -1,4 +1,4 @@
-const CACHE_NAME = "lenormand-cards-v6";
+const CACHE_NAME = "lenormand-cards-v7";
 
 const APP_SHELL = [
   "/",

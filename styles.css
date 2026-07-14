@@ -550,31 +550,40 @@ details summary {
 
   .significator-layout {
     max-width: none;
-    gap: 0.45rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "above"
+      "left"
+      "center"
+      "right"
+      "below";
+    gap: 0.6rem;
   }
 
   .significator-layout .card-tile {
-    padding: 0.55rem 0.45rem;
-    gap: 0.35rem;
+    grid-template-columns: 4.5rem 1fr;
+    grid-template-areas:
+      "face label"
+      "face number"
+      "face name"
+      "face meaning";
+    align-items: start;
+    column-gap: 0.9rem;
+    row-gap: 0.2rem;
+    padding: 0.8rem;
   }
 
-  .significator-layout .card-name {
-    font-size: 0.68rem;
-    letter-spacing: 0.01em;
+  .significator-layout .card-face {
+    grid-area: face;
+    width: 4.5rem;
+    align-self: center;
   }
 
-  .significator-layout .card-meaning {
-    font-size: 0.72rem;
-  }
-
-  .significator-layout .card-number {
-    font-size: 0.52rem;
-  }
-
-  .significator-layout .card-label {
-    font-size: 0.5rem;
-    letter-spacing: 0.1em;
-  }
+  .significator-layout .card-label { grid-area: label; }
+  .significator-layout .card-number { grid-area: number; align-self: end; }
+  .significator-layout .card-name { grid-area: name; }
+  .significator-layout .card-meaning { grid-area: meaning; }
+  .significator-layout .playing-card-badge { grid-column: 2; }
 
   .tableau-tile {
     min-width: 2.6rem;
